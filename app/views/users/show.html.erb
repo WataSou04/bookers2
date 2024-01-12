@@ -2,11 +2,10 @@
 
 <% @books.each do |book| %>
 <div>
-  <%= link_to book_path(book.id) do %>
-    
-  <% end %>
   <p>Title:<%= book.title %></p>
   <p>Opinion:<%= book.body %></p>
   <p>Name:<%= book.user.name %></p>
 </div>
 <% end %>
+
+<%= @books
