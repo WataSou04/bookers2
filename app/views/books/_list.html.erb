@@ -1,3 +1,13 @@
+<div>
+  <h3>User info</h3>
+  <%= image_tag user.get_profile_image(100,100) %>
+  <p>name:<%= user.name %></p>
+  <p>introduction:<%= @user.introduction %></p>
+  <% if user == current_user %>
+    <p><%= link_to "Profile", edit_user_path(user) %></p>
+  <% end %>
+</div>
+
 <% if book.errors.any? %>
   <%= book.errors.count %>errors prohibited this obj from being saved:
   <ul>
