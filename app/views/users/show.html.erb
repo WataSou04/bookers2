@@ -1,3 +1,9 @@
+<div>
+  <% flash.each do |message_type, message| %>
+    <%= content_tag :div, message, class: message_type %>
+  <% end %>
+</div>
+
 <%= render 'books/list', book: @book , user: @user%>
 
 <% @books.each do |book| %>
