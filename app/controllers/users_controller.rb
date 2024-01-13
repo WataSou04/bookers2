@@ -17,7 +17,8 @@ class UsersController < ApplicationController
   
   def index
     @book = Book.new
-    @user = User.all
+    @books = Book.all
+    @user = current_user
   end
   
   def user_params
