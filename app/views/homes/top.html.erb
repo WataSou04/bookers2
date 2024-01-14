@@ -8,3 +8,19 @@
 <p>In Bookers,<br>
 you can share and exchange your opinions , inpressions , and emotions<br>
 about various books!</p>
+
+  <% if user_signed_in? %>
+    <p>
+      <%= link_to "Log in", user_path(@user.id) %>
+    </p>
+    <p>
+      <%= link_to "Sign up", user_path(@user.id) %>
+    </p>
+  <% else %>
+    <p>
+      <%= link_to "Log in", new_user_session_path %>
+    </p>
+    <p>
+      <%= link_to "Sign up", new_user_registration_path %>
+    </p>
+  <% end %>
