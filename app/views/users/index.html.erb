@@ -4,7 +4,7 @@
   <div>
     <p><%= image_tag book.user.get_profile_image(100,100) %></p>
     <p><%= book.user.name %></p>
-    <%= link_to user_path(user.id) do %>
+    <%= link_to user_path(@user.id) do %>
       <p>Show</p>
     <% end %>
   </div>
