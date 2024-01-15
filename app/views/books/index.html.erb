@@ -1,13 +1,33 @@
-<%= render 'list', book: @book , user: @user %>
+<div class="container">
+  <div class="row">
 
-<% @books.each do |book| %>
-  <div>
-    <p><%= image_tag book.user.get_profile_image(100,100) %></p>
-    <%= link_to book_path(book.id) do %>
-    <p>Title:<%= book.title %></p>
+  <%= render 'list', book: @book , user: @user %>
+
+    <div class="offset-md-1"></div>
+    <div class="col-md-8">
+      <h2>Books</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th style="width: 10%"></th>
+            <th style="width: 30%">Title</th>
+            <th style="width: 60%">Opinion</th>
+          </tr>
+        </thead>
+    <% @books.each do |book| %>
+        <tbody>
+          <tr>
+            <td><%= image_tag book.user.get_profile_image(100,100) %></td>
+            <td><%= link_to book_path(book.id) do %>
+            <p>Title:<%= book.title %></p>
+            <% end %>
+            </td>
+            <td><%= book.body %></td>
+          </tr>
+        </tbody>
     <% end %>
-    
-    <p>Opinion:<%= book.body %></p>
-    
+      </table>
+    </div>
+    </div>
   </div>
-<% end %>
+</div>
