@@ -12,9 +12,9 @@
 </div>
 
   <% if user_signed_in? %>
-  <div class="d-grid gap-2 col-6 mx-auto">
-      <%= link_to "Log in", user_path(@user.id), class: "btn btn-primary w-50", type: "button" %>
-      <%= link_to "Sign up", user_path(@user.id), class: "btn btn-primary w-50", type: "button" %>
+  <div class="col-6 mx-auto">
+      <%= link_to "Log in", user_path(@user.id), class: "btn btn-primary w-50" %>
+      <%= link_to "Sign up", user_path(@user.id), class: "btn btn-primary w-50" %>
   <% else %>
       <%= link_to "Log in", new_user_session_path, class: "btn btn-primary", type: "button" %>
       <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary", type: "button" %>
