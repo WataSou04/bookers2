@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mt-3">
   <div class="row">
 
   <%= render 'list', book: @book , user: @user %>
@@ -19,7 +19,7 @@
           <tr>
             <td><%= image_tag book.user.get_profile_image(100,100) %></td>
             <td><%= link_to book_path(book.id) do %>
-            <p>Title:<%= book.title %></p>
+            <p><%= book.title %></p>
             <% end %>
             </td>
             <td><%= book.body %></td>
