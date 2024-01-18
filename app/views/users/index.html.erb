@@ -19,7 +19,7 @@
             <td><%= image_tag book.user.get_profile_image(100,100) %></td>
             <td><%= book.user.name %></td>
             <td>
-            <%= link_to user_path(@user.id) do %>
+            <%= link_to user_path(book.user.id) do %>
               Show
             <% end %>
             </td>
